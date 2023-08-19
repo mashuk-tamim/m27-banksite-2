@@ -4,7 +4,11 @@ function getInputFieldValueByID(inputFieldID) {
     inputField.value = '';
     return inputAmount;
 }
-function putElementValueById(updatedElementValueID,inputAmount){
+function putElementValueById(updatedElementValueID, inputAmount) {
     const updatedValue = document.getElementById(updatedElementValueID);
     updatedValue.innerText = parseFloat(updatedValue.innerText) + parseFloat(inputAmount);
+}
+function putElementValueByIdForWithdraw(updatedElementValueID, inputAmount) {
+    const updatedValue = document.getElementById(updatedElementValueID);
+    updatedValue.innerText = parseFloat(updatedValue.innerText) - parseFloat(inputAmount);
 }
